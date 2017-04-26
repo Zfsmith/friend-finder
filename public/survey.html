@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+</head>
+<body>
+	<section class="container">
+		<header class="row">
+			<h3 class="twelve columns">Survey Questions</h3>
+			<hr class="twelve columns">
+		</header>
+		<form>
+			<div class="row">
+				<div class="twelve columns">
+					<label><h4>About You</h4></label>
+					<label>Name(Required)</label>
+					<input class="u-full-width" type="email" name="name" id="name">
+					<label>Link to Photo(Required)</label>
+					<input class="u-full-width" type="email" name="photo" id="photo">
+				</div>
+				
+				<hr class="twelve columns">
+				<div class="twelve columns">
+					<label for="first-question">I like video games</label>
+			        <select class="u-full-width" id="q1">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+					</select>  
+				</div>	      
+				<div class="twelve columns">
+					<label for="first-question">I drink lots of soda</label>
+			        <select class="u-full-width" id="q2">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I like to ride my bike</label>
+			        <select class="u-full-width" id="q3">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I eat lots of healthy food</label>
+			        <select class="u-full-width" id="q4">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I like to draw</label>
+			        <select class="u-full-width" id="q5">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I like to read</label>
+			        <select class="u-full-width" id="q6">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I go camping often</label>
+			        <select class="u-full-width" id="q7">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I get plenty of rest at night</label>
+			        <select class="u-full-width" id="q8">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I watch lots of Netflix</label>
+			        <select class="u-full-width" id="q9">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<label for="first-question">I waste lots of time on silly things</label>
+			        <select class="u-full-width" id="q10">
+				        <option value="1">1</option>
+				        <option value="2">2</option>
+				        <option value="3">3</option>
+				        <option value="4">4</option>
+				        <option value="5">5</option>
+				    </select>
+				</div>
+				<div class="twelve columns">
+					<a data-remodal-target="modal" id="submit" class="button button-primary" >Submit</a>
+					<!-- <a ><button id="submit" data-remodal-target="modal"  class="button-primary">Submit</button></a> -->
+				</div>
+			</div>
+		</form>
+	</section>
+
+	<div class="remodal" data-remodal-id="modal">
+	  <button data-remodal-action="close" class="remodal-close"></button>
+	  <h1>Here is your match</h1>
+	  <div id="match">
+	  	
+	  </div>
+	  <br>
+	  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+	</div>
+</body>
+	<script type="text/javascript">
+		$("#submit").on("click",function(event){
+			event.preventDefault();
+			var input = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores:[
+					$("#q1").val().trim(),
+					$("#q2").val().trim(),
+					$("#q3").val().trim(),
+					$("#q4").val().trim(),
+					$("#q5").val().trim(),
+					$("#q6").val().trim(),
+					$("#q7").val().trim(),
+					$("#q8").val().trim(),
+					$("#q9").val().trim(),
+					$("#q10").val().trim()
+				]
+			};
+			
+			
+
+			$.post("/api/friends", input)
+			.done(function(data){
+				console.log("hey");
+				console.log(data);
+			});
+			
+			// $.get("/api/match",function(data){
+			// 	if(data){
+			// 		$("#insert").append("<h4>" + data.name + "</h4>");
+			// 		$("#insert").append("<img src = '" +data.photo  "'>");
+
+			// 	};
+			// });
+
+		});
+
+
+	</script>
+</html>
