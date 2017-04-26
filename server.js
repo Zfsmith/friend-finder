@@ -25,6 +25,6 @@ var apiRoutes = require("./routing/apiRoutes")(app,path,express,bodyParser);
 // Sets up the Express app to handle data parsing
 
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
