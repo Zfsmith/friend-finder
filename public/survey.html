@@ -145,7 +145,6 @@
 	  <br>
 	  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
 	</div>
-</body>
 	<script type="text/javascript">
 		$("#submit").on("click",function(event){
 			event.preventDefault();
@@ -153,37 +152,36 @@
 				name: $("#name").val().trim(),
 				photo: $("#photo").val().trim(),
 				scores:[
-					$("#q1").val().trim(),
-					$("#q2").val().trim(),
-					$("#q3").val().trim(),
-					$("#q4").val().trim(),
-					$("#q5").val().trim(),
-					$("#q6").val().trim(),
-					$("#q7").val().trim(),
-					$("#q8").val().trim(),
-					$("#q9").val().trim(),
-					$("#q10").val().trim()
+					$("#q1").val(),
+					$("#q2").val(),
+					$("#q3").val(),
+					$("#q4").val(),
+					$("#q5").val(),
+					$("#q6").val(),
+					$("#q7").val(),
+					$("#q8").val(),
+					$("#q9").val(),
+					$("#q10").val()
 				]
 			};
 			
 			
 
 			$.post("/api/friends", input)
-			.done(function(data){
+			.done(function(data) {
+				if(data){
+					console.log("hey");
+					console.log(data);
+					$("#match").empty();
+					$("#match").append("<h4>" + data.name + "</h4>");
+					$("#match").append("<img src = '" +data.photo + "'>");
+				};
 				console.log("hey");
 				console.log(data);
 			});
-			
-			// $.get("/api/match",function(data){
-			// 	if(data){
-			// 		$("#insert").append("<h4>" + data.name + "</h4>");
-			// 		$("#insert").append("<img src = '" +data.photo  "'>");
-
-			// 	};
-			// });
-
 		});
 
-
 	</script>
+</body>
+	
 </html>
